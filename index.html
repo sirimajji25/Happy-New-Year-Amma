@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year Amma! 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Canvas for Fireworks -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Entry Screen for Sound Interaction -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1>🎁</h1>
+            <p>A Special Surprise for Amma</p>
+            <button id="enter-btn">Tap to Open</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
+
+        <header>
+            <h1 class="animate-pop">Happy New Year 2k26 <span class="highlight">Amma!</span></h1>
+        </header>
+
+        <section class="photo-section">
+            <div class="photo-frame-wrapper">
+                <div class="photo-frame">
+                    <img id="mom-photo" src="assets/mom.jpg" alt="Mom's Photo">
+                </div>
+                <!-- Hidden file input -->
+                <input type="file" id="photo-upload" accept="image/*" hidden>
+                <button id="upload-btn" class="upload-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Upload Photo
+                </button>
+            </div>
+            <p class="message">May this year bring you a lot of happiness, health, and joy!</p>
+        </section>
+
+        <section class="wishes-section">
+            <h2>Make a Wish ✨</h2>
+            <div class="wishes-grid">
+                <div class="wish-card" data-wish="health">
+                    <span class="icon">❤️</span>
+                    <h3>Health</h3>
+                </div>
+                <div class="wish-card" data-wish="joy">
+                    <span class="icon">😊</span>
+                    <h3>Joy</h3>
+                </div>
+                <div class="wish-card" data-wish="wealth">
+                    <span class="icon">💎</span>
+                    <h3>Wealth</h3>
+                </div>
+                <div class="wish-card" data-wish="peace">
+                    <span class="icon">🕊️</span>
+                    <h3>Peace</h3>
+                </div>
+            </div>
+            <div id="wish-display" class="wish-display hidden"></div>
+        </section>
+
+    </main>
+
+    <!-- Audio handled by Web Audio API in script.js -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
